@@ -1,4 +1,8 @@
-   stages {
+   pipeline {
+       agent any
+
+       stages {
+
         stage('Execution rights') {
             steps {
                 sh 'chmod +x gradlew'
@@ -14,4 +18,5 @@
                 echo 'Deploying....'
             }
         }
+    }
     }
